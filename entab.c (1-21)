@@ -13,6 +13,7 @@ void entab(FILE *fin, FILE * fout, int tab){
   while ((c = fgetc(fin)) != EOF){
     ++counter; // Count the number of spaces
   }
+  fputc(c, fout);
   int ntabs = counter / TAB_STOP; //calculate how many tabs the spaces equate to
   int nspaces = counter % TAB_STOP; // use the remaining as spaces
   while (ntabs-- > 0){ fputc('\t', fout);}
