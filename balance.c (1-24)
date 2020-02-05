@@ -7,7 +7,7 @@
 int main(int argc, const char * argv[]) {
 
   if (argc != 2 && argc != 3 ){
-       fprintf(stderr, "Usage : ./comment inputfile outputfile \n");
+       fprintf(stderr, "Usage : ./balance inputfile outputfile \n");
        exit(1);
    }
 
@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
    FILE * fout = fopen(argv[2], "w"); //read from the second file
 
    if (fin == NULL || fout == NULL){
-       fprintf(stderr,"Usage: ./comment inputfile outputfile\n" );
+       fprintf(stderr,"Usage: ./balance inputfile outputfile\n" );
        exit(1);
    }
 
