@@ -7,7 +7,7 @@
 
 int main(int argc, const char * argv[]) {
     if (argc != 3 && argc != 4 ){
-        fprintf(stderr, "Usage : ./detab inputfile(outputfile tabstops (optional)\n");
+        fprintf(stderr, "Usage : ./entab inputfile(outputfile tabstops (optional)\n");
         exit(1);
     }
 
@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     FILE * fin = fopen(argv[1], "r");
     FILE * fout = fopen(argv[2], "w");
     if (fin == NULL || fout == NULL){
-        fprintf(stderr,"Usage: ./detab inputfile outputfile\n" );
+        fprintf(stderr,"Usage: ./entab inputfile outputfile\n" );
         exit(1);
     }
    
