@@ -25,9 +25,11 @@ int main(int argc, const char * argv[]) {
    while ((c = fgetc(fin)) != EOF) {
      if ((c == '(') || (c == '[') || (c == '{') ||(c == '"')){
        ++ balance_counter;
+       fputc(c,fout);
      }
      else if((c == ')') || (c == ']') || (c == '}')){
        ++balance_counter;
+       fputc(c,fout);
      }
   }
   if (balance_counter % 2 != 0){
